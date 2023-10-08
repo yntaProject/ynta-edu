@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter;
+}
+
+:root {
+  --primary-color: #ED553B;
+  --secondary-color: #173F5F;
+  --blue-color: #4A90E2;
+  --text-color: #38426C;
+  --grey-border: #C0C0C0;
+  --third-color: #393280;
+}
+
+body {
+  height: 100%;
+  min-height: 100vh;
+}
+
+.root-layout {
+  padding: 50px 100px;
+}
+
+a {
+  all: unset;
+}
+
+img{
+  background: rgba(0, 0, 0, 0.1);
+}

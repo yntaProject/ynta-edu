@@ -1,0 +1,17 @@
+.booksHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding:  0 20px 10px;
+  margin-bottom: 20px;
+  h1{
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 145%; /* 87px */
+    letter-spacing: -1.2px;
+    text-transform: capitalize;
+  }
+}

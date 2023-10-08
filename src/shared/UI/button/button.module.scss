@@ -1,0 +1,49 @@
+.buttonPrimary {
+  background: var(--primary-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.171px;
+  padding: 15px 30px;
+  border: none;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.buttonOutlined {
+  border: 1px solid var(--primary-color);
+  background: rgba(255, 255, 255, 0);
+  color: var(--primary-color);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 220%;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 26px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in;
+
+  .arrowRight {
+    width: 12.432px;
+    height: 9.574px;
+  }
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+}

@@ -1,0 +1,21 @@
+.booksContainer{
+  width: 100%;
+  display: grid;
+  justify-content: flex-start;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 300px));
+  overflow: hidden;
+}
+.booksImage{
+  overflow: hidden;
+  width: 500px;
+  height: 600px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 20px;
+  &:hover{
+    opacity: 0.7;
+    border-radius: 20px 20px 200px 20px;
+  }
+}

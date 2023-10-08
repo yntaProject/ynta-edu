@@ -1,0 +1,56 @@
+.form {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.formContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+
+  .formInput {
+    width: 100%;
+    border-bottom: 1px solid #111111;
+  }
+}
+
+.formButton {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+
+  p {
+    color: grey;
+
+    &:hover {
+      color: #173F5F;
+    }
+  }
+}
+
+.googleIcon {
+  width: 50px;
+  height: 50px;
+}
+
+.googleForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.googleButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}

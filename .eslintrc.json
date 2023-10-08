@@ -1,0 +1,68 @@
+{
+  "env": {
+    "node": true,
+    "commonjs": true,
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react"
+  ],
+  "rules": {
+    "indent": [
+      "error",
+      2
+    ],
+    "quotes": [
+      "error",
+      "double"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "react/display-name": "off",
+    "react/prop-types": 0,
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "no-undef": "error",
+    "no-extra-semi": "warn",
+    "no-console": "warn",
+    "no-multiple-empty-lines": "warn",
+    "camelcase": "error",
+    "max-len": [
+      "error",
+      200,
+      {
+        "tabWidth": 2,
+        "ignoreStrings": true
+      }
+    ],
+    "prefer-const": "warn",
+    "no-duplicate-imports": "error",
+    "no-const-assign": "error",
+    "no-unused-expressions": "warn",
+    "object-curly-spacing": [
+      "warn",
+      "always"
+    ],
+    "no-extra-parens": "warn",
+    "prefer-template": "error",
+    "prefer-arrow-callback": "warn",
+    "no-underscore-dangle": "warn",
+    "react/react-in-jsx-scope": "off"
+  }
+}

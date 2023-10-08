@@ -1,0 +1,1 @@
+export { ProfileContent } from "./UI/profile-content";
