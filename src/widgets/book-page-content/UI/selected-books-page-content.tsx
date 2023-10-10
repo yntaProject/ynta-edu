@@ -10,7 +10,7 @@ interface SelectedBooksPageContent {
 }
 
 const SelectedBooksPageContent = ({ type }: SelectedBooksPageContent) => {
-  const [booksData, isLoading] = useFetchData<IBook>(type);
+  const [booksData, isLoading] = useFetchData<IBook>(type, true);
   const [activeBook, setActiveBook] = useState<IBook | null>(null);
   const [selectedChat, setSelectedChat] = useState<string>("6chat");
 

@@ -8,11 +8,11 @@ const ButtonBack = () => {
     if (location.state?.from) {
       navigate(location.state.from);
     } else {
-      navigate(-1); // переход на одну страницу назад в истории браузера
+      navigate(-1);
     }
   };
   return (
-    <Button variant={"primary"} onClick={goBack}>BACK</Button>
+    <Button variant={"primary"} onClick={goBack}>Назад</Button>
   );
 };
 

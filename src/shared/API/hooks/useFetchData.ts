@@ -4,11 +4,12 @@ import { db } from "../../../firebase";
 
 type UseFetchDataReturn<T> = [T[], boolean];
 
-export function useFetchData<T extends { createdAt: Date }>(path: string): UseFetchDataReturn<T> {
+export function useFetchData<T extends {
+  createdAt: Date
+}>(path: string, addCreatedAt?: boolean = false): UseFetchDataReturn<T> {
   const [data, setData] = useState<T[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  // Fetch data from Firestore
   useEffect(() => {
     const unsubscribe = onSnapshot(
       collection(db, path),
@@ -16,7 +17,13 @@ export function useFetchData<T extends { createdAt: Date }>(path: string): UseFe
         const newData: T[] = [];
         querySnapshot.forEach((doc) => {
           const docData = doc.data();
-          newData.push({ ...docData, id: doc.id } as unknown as T);
+          if (addCreatedAt) {
+            const timestamp = doc._document.createTime.timestamp;
+            const milliseconds = (timestamp.seconds * 1000) + (timestamp.nanoseconds / 1000000);
+            newData.push({ ...docData, id: doc.id, createdAt: new Date(milliseconds) } as unknown as T);
+          } else {
+            newData.push({ ...docData, id: doc.id } as unknown as T);
+          }
         });
         // @ts-ignore
         const sortedData = newData.sort((a: T, b: T) => a.createdAt - b.createdAt);

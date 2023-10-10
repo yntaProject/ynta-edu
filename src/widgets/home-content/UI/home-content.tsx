@@ -27,9 +27,9 @@ const HomeContent = () => {
     <div>
       <animated.div style={animationY} className={cl.homeIntro}>
         <div className={cl.homeIntroText}>
-          <h1>ipsum dolor si</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero ipsum enim pharetra
-            hac. Urna commodo, lacus ut magna velit eleifend. Amet, quis urna, a eu.</p>
+          <h1>Книги – это окно в другие миры и эпохи.</h1>
+          <p>Книги – не просто источник знаний. Они – друзья, наставники, источники вдохновения, помогающие расширять
+            горизонты и понимать этот многогранный мир.</p>
           <Link to={"/books"}>
             <Button variant={"outlined"} extraClassName={cl.homeIntroTextLink}>К книгам!</Button>
           </Link>
@@ -39,49 +39,46 @@ const HomeContent = () => {
 
       <animated.div style={animationXleft} className={cl.preBenefits}>
         <h2>
-          Explore our Top Categories
+          Мир книг под рукой: погрузись, обменяйся, поделись!
         </h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero ipsum enim pharetra hac.
-          Urna commodo, lacus ut magna velit eleifend. Amet, quis urna, a eu.Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Sed eu feugiat amet, libero ipsum ipsum dolor sit amet, consectetur adipiscing elit. Sed eu
-          feugiat amet, libero ipsum..</p>
+        <p>В литературе скрыты удивительные миры, от фантастических галактик до тайн человеческой души. Наш сайт
+          приглашает вас в это путешествие. Поделитесь впечатлениями, обменяйтесь опытом и откройте новые горизонты
+          чтения. Обогащайтесь, общайтесь и погружайтесь в увлекательный процесс вместе с нами. Мир книг ждет вас!</p>
       </animated.div>
       <animated.div style={animationXright} className={cl.benefits}>
         <div className={cl.benefitsItem}>
           <img src="./assets/images/landing/benefit1.png" alt="benefit1"/>
           <div className={cl.benefitsItemText}>
-            <h4>Higher Education</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero ipsum enim pharetra
-              hac. Urna commodo, lacus ut mat,</p>
+            <h4>Развитие критического мышления</h4>
+            <p>Чтение книг углубляет аналитические навыки, учит воспринимать информацию осмысленно и делать обоснованные
+              выводы.</p>
           </div>
         </div>
 
         <div className={cl.benefitsItem}>
           <img src="./assets/images/landing/benefit2.png" alt="benefit2"/>
           <div className={cl.benefitsItemText}>
-            <h4>Management Books</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero ipsum enim pharetra
-              hac. Urna commodo, lacus ut mat,</p>
+            <h4>Улучшение коммуникативных способностей</h4>
+            <p>Благодаря литературе расширяется словарный запас, улучшается грамотность и способность ясно выражать свои
+              мысли.</p>
           </div>
         </div>
 
         <div className={cl.benefitsItem}>
           <img src="./assets/images/landing/benefit3.png" alt="benefit3"/>
           <div className={cl.benefitsItemText}>
-            <h4>Engineering Books</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero ipsum enim pharetra
-              hac. Urna commodo, lacus ut mat,</p>
+            <h4>Развитие эмпатии</h4>
+            <p>Через книги мы переживаем истории других людей, что помогает лучше понимать и чувствовать чужие эмоции и
+              переживания.</p>
           </div>
         </div>
       </animated.div>
 
       <animated.div style={animationXleft} className={cl.joinUs}>
         <div className={cl.joinUsText}>
-          <h2>Access, Read, Practice & Engage
-            with Digital Content (eBook) </h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero ipsum enim pharetra
-            hac. Urna commodo, lacus ut magna velit eleifend. Amet, quis urna, a eu.Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit.</p>
+          <h2>Присоединяйтесь к нашему сообществу читателей!</h2>
+          <p>Откройте для себя мир увлекательных книг, общайтесь с единомышленниками и делитесь своими впечатлениями.
+            Зарегистрируйтесь сейчас, чтобы начать новое захватывающее путешествие в мире литературы! 📚🌍</p>
           <Link to={"/auth"}><Button variant={"primary"}>Зарегестрироваться</Button></Link>
         </div>
         <img src="./assets/images/landing/girl-with-books.png" alt="girl with books"/>
@@ -89,29 +86,29 @@ const HomeContent = () => {
 
       <div className={cl.statistic}>
         <div className={cl.statisticLeft}>
-          <h1>All books are 50% off now! Don't miss such a deal!</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero ipsum enim pharetra
-            hac.</p>
+          <h1>Огромный выбор книг ждет своего читателя!</h1>
+          <p>Углубитесь в мир литературы и откройте для себя новые горизонты, участвуя в активном обсуждении книг на
+            нашем ресурсе.</p>
           <div className={cl.statisticLeftCols}>
             <div className={cl.statisticLeftColsItem}>
-              <h5>768</h5>
-              <p>Days</p>
+              <h5>42+</h5>
+              <p>Книг на сайте</p>
             </div>
             <div className={cl.statisticLeftColsItem}>
-              <h5>01</h5>
-              <p>Hour</p>
+              <h5>23</h5>
+              <p>Активных читателей</p>
             </div>
             <div className={cl.statisticLeftColsItem}>
-              <h5>27</h5>
-              <p>Mint</p>
+              <h5>426</h5>
+              <p>Обсуждений о книгах</p>
             </div>
             <div className={cl.statisticLeftColsItem}>
-              <h5>55</h5>
-              <p>Sec</p>
+              <h5>320</h5>
+              <p>Рекомендаций</p>
             </div>
           </div>
           <Link to={"/books"}>
-            <Button variant={"outlined"} extraClassName={cl.statisticLeftColsButton}>К книгам!</Button>
+            <Button variant={"outlined"} extraClassName={cl.statisticLeftColsButton}>Погрузитесь в чтение!</Button>
           </Link>
         </div>
         <img src="./assets/images/landing/books-group2.png" alt="books group2"/>
@@ -121,19 +118,21 @@ const HomeContent = () => {
         <img src="./assets/images/landing/typing.jpg" alt="typing"/>
         <div className={cl.feedbackRight}>
           <div className={cl.feedbackRightText}>
-            <h2>Get over a 100 free books</h2>
-            <p>Get access by subcribing to our newsletter. Jump start your book reading by quickly check through the
-              popular book categories...</p>
+            <h2>Обратная связь</h2>
+            <p>Если вы столкнулись с проблемой или хотите предложить улучшение, дайте нам знать! Мы ценим ваше мнение и
+              стремимся сделать наш сайт лучше.</p>
           </div>
 
           <div className={cl.feedbackRightButton}>
-            <Input placeholder={"Сообщить об ошибке ->"}
+            <Input
+              placeholder={"Опишите вашу проблему или предложение"}
               value={feedback}
               onChange={(e) => setFeedback(e.target.value)}/>
             <Button variant={"primary"} onClick={() => setFeedback("")}>Отправить</Button>
           </div>
         </div>
       </div>
+
     </div>
   );
 };
