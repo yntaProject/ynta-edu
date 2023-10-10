@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { collection, onSnapshot, getDoc } from "firebase/firestore";
+import { collection, onSnapshot } from "firebase/firestore";
 import { db } from "../../../firebase";
 
 type UseFetchDataReturn<T> = [T[], boolean];
@@ -13,21 +13,21 @@ export function useFetchData<T extends {
   useEffect(() => {
     const unsubscribe = onSnapshot(
       collection(db, path),
-      async (querySnapshot) => {
-        const newDataPromises: Promise<T>[] = querySnapshot.docs.map(async (doc) => {
+      (querySnapshot) => {
+        const newData: T[] = [];
+        querySnapshot.forEach((doc) => {
           const docData = doc.data();
           if (addCreatedAt) {
-            const fullDoc = await getDoc(doc.ref);
             // @ts-ignore
-            const timestamp = fullDoc.metadata.createTime;
-            const milliseconds = (timestamp?.seconds * 1000) + (timestamp?.nanoseconds / 1000000);
-            return { ...docData, id: doc.id, createdAt: new Date(milliseconds!) } as unknown as T;
+            const timestamp = doc._document.createTime.timestamp;
+            const milliseconds = (timestamp.seconds * 1000) + (timestamp.nanoseconds / 1000000);
+            newData.push({ ...docData, id: doc.id, createdAt: new Date(milliseconds) } as unknown as T);
           } else {
-            return { ...docData, id: doc.id } as unknown as T;
+            newData.push({ ...docData, id: doc.id } as unknown as T);
           }
         });
-        const newData = await Promise.all(newDataPromises);
-        const sortedData = newData.sort((a: T, b: T) => a.createdAt.getTime() - b.createdAt.getTime());
+        // @ts-ignore
+        const sortedData = newData.sort((a: T, b: T) => a.createdAt - b.createdAt);
         setData(sortedData);
         setIsLoading(false);
       }

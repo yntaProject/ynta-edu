@@ -14,7 +14,7 @@ export const sub = async (e, email: string, name: string, pwd: string, isLogin: 
     signInWithEmailAndPassword(auth, email, pwd)
       .then(() => {
         setMessage("Successfully logged in");
-        window.location.reload();
+        window.location.href = "/";
       })
       .catch(() => {
         setMessage("Invalid password or email");
