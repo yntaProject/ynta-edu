@@ -18,6 +18,7 @@ export function useFetchData<T extends {
         querySnapshot.forEach((doc) => {
           const docData = doc.data();
           if (addCreatedAt) {
+            // @ts-ignore
             const timestamp = doc._document.createTime.timestamp;
             const milliseconds = (timestamp.seconds * 1000) + (timestamp.nanoseconds / 1000000);
             newData.push({ ...docData, id: doc.id, createdAt: new Date(milliseconds) } as unknown as T);
