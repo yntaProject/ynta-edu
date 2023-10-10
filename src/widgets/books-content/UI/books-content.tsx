@@ -11,13 +11,13 @@ const BooksContent = () => {
   return (
     <animated.div style={animationY} className={cl.booksContainer}>
       <Link to={"/books/worldwide"}>
-        <img src="./assets/images/world-culture.webp" alt="world culture" className={cl.booksImage}/>
+        <img src="/assets/images/world-culture.webp" alt="world culture" className={cl.booksImage}/>
       </Link>
       <Link to={"/books/russian"}>
-        <img src="./assets/images/russian-culture.jpeg" alt="world culture" className={cl.booksImage}/>
+        <img src="/assets/images/russian-culture.jpeg" alt="world culture" className={cl.booksImage}/>
       </Link>
       <Link to={"/books/kazakh"}>
-        <img src="./assets/images/kazakh-culture.webp" alt="world culture" className={cl.booksImage}/>
+        <img src="/assets/images/kazakh-culture.webp" alt="world culture" className={cl.booksImage}/>
       </Link>
     </animated.div>
   );
