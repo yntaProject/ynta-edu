@@ -1,4 +1,4 @@
-import { CreativityContent } from "../../widgets/achievements-content";
+import { CreativityContent } from "../../widgets/creativity-content";
 
 const CreativityPage = () => {
   return (
