@@ -34,6 +34,8 @@ const Navbar = () => {
         <Link to={"/about"} className={cl.sectionItem}>О Нас</Link>
         <span className={cl.column}></span>
         <Link to={"/books"} className={cl.sectionItem}>Книги</Link>
+        <span className={cl.column}></span>
+        <Link to={"/creativity"} className={cl.sectionItem}>Творчество</Link>
       </div>
       {loading && <h1>...</h1> ||
         user?.emailVerified &&

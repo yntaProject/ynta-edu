@@ -7,6 +7,7 @@ import { RussianBooksPage } from "../../pages/books-page/russian-books-page/russ
 import { KazakhBooksPage } from "../../pages/books-page/kazakh-books-page/kazakh-books-page";
 import { WorldwideBooksPage } from "../../pages/books-page/worldwide-books-page/worldwide-books-page";
 import { AboutPage } from "../../pages/about-page/about-page";
+import { CreativityContent } from "../../widgets/creativity-content";
 
 export const routes = [{
   path: "/",
@@ -20,6 +21,10 @@ export const routes = [{
   path: "/about",
   component: AboutPage,
   isPrivate: false,
+}, {
+  path: "/creativity",
+  component: CreativityContent,
+  isPrivate: true,
 }, {
   path: "/books/russian",
   component: RussianBooksPage,

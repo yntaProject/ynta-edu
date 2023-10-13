@@ -28,6 +28,7 @@ export function useFetchData<T extends {
         });
         // @ts-ignore
         const sortedData = newData.sort((a: T, b: T) => a.createdAt - b.createdAt);
+
         setData(sortedData);
         setIsLoading(false);
       }

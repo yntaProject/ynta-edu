@@ -17,3 +17,11 @@ export interface IMessage {
     messageImageName: string
   };
 }
+export interface ICreativityMessage {
+  userName: string;
+  email: string;
+  message: string;
+  id?: string;
+  createdAt: any;
+}
+

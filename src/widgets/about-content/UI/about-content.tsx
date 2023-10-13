@@ -21,8 +21,9 @@ const AboutContent = () => {
     <div>
       <div className={cl.about}>
         <animated.h1 style={animationXleft}>О Нас</animated.h1>
-        <animated.img style={animationXright} src="./assets/images/landing/about-us-background.jpg" alt="about us"
-                      className={cl.aboutBackground}/>
+        <animated.img
+          style={animationXright} src="./assets/images/landing/about-us.jpg" alt="about us"
+          className={cl.aboutBackground}/>
       </div>
       <animated.div style={animationY} className={cl.aboutContent}>
         <div className={cl.aboutContentItem}>

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/books",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/creativity",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/books/russian",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/books/kazakh",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/books/worldwide",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/auth",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/profile",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/:catchAll*",
+      "destination": "/index.html"
+    }
+  ]
+}
