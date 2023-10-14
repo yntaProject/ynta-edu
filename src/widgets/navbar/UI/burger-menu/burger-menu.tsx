@@ -16,7 +16,7 @@ interface BurgerMenuProps {
 }
 
 const BurgerMenu = ({ isOpen, setIsOpen, loading, user, avatar }: BurgerMenuProps) => {
-  return isOpen ? 
+  return isOpen ?
     <header className={cl.burger}>
       <div className={cl.burgerBtn}>
         <Hamburger toggled={isOpen} toggle={setIsOpen} size={48} easing="ease-in-out" rounded color={"#FFFFFF"}/>
@@ -71,11 +71,12 @@ const BurgerMenu = ({ isOpen, setIsOpen, loading, user, avatar }: BurgerMenuProp
           <Link to={"/auth"} className={cl.sectionItem}>Зарегистрироваться</Link>
         </div>}
     </header>
-    : 
-    <header className={cl.burgerBtn}>
-      <Hamburger toggled={isOpen} toggle={setIsOpen} size={48} easing="ease-in-out" rounded color={"#ED553B"}/>
-    </header>
-  ;
+    :
+    <header>
+      <div className={cl.burgerBtn}>
+        <Hamburger toggled={isOpen} toggle={setIsOpen} size={48} easing="ease-in-out" rounded color={"#ED553B"}/>
+      </div>
+    </header>;
 };
 
 export { BurgerMenu };

@@ -7,11 +7,12 @@
   z-index: 100;
   background: var(--primary-color);
   height: 100vh;
-  padding: 100px;
+  padding: 80px 50px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 100px;
+  overflow-x: scroll;
 }
 
 .burgerBtn {
