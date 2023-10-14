@@ -4,6 +4,8 @@ import cl from "./selected-books.module.scss";
 import { IBook } from "../../../shared/types";
 import { Forum } from "./forum";
 import { isBookNew } from "../utils/is-new-book";
+import { MutatingDots } from "react-loader-spinner";
+import { Frame } from "../../../shared/UI/frame/frame";
 
 interface SelectedBooksPageContent {
   type: string;
@@ -20,13 +22,27 @@ const SelectedBooksPageContent = ({ type }: SelectedBooksPageContent) => {
     }
   }, [booksData]);
 
-  if (isLoading) return <h1>Loading...</h1>;
+  if (isLoading) return <Frame h={"70vh"}>
+    <MutatingDots
+      height="100"
+      width="100"
+      color="#ED553B"
+      secondaryColor="#ED553B"
+      radius="12.5"
+      ariaLabel="mutating-dots-loading"
+      wrapperStyle={{}}
+      wrapperClass=""
+      visible={true}
+    />;
+  </Frame>;
 
   return (
     <div className={cl.booksNav}>
       <div className={cl.booksContainer}>
         {booksData.map((book: IBook) =>
-          <div key={book.id} className={`${cl.booksItem} ${book.id === activeBook?.id && cl.activeBookItem}`}
+          <div
+            key={book.id}
+            className={`${cl.booksItem} ${book.id === activeBook?.id && cl.activeBookItem}`}
             onClick={() => setActiveBook(book)}>
             <h1>{book.title}</h1>
             {isBookNew(book.createdAt) && <p className={cl.newBook}>НОВАЯ</p>}

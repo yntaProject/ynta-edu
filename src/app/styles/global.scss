@@ -27,6 +27,18 @@ a {
   all: unset;
 }
 
-img{
+img {
   background: rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 1600px) {
+  .root-layout {
+    padding: 50px 40px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .root-layout {
+    padding: 70px 20px;
+  }
 }

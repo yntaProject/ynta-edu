@@ -7,6 +7,8 @@ import { getUniqueDates } from "../../../utils/get-unique-dates";
 import { ForumHeader } from "./header/forum-header";
 import { ForumBody } from "./body/forum-body";
 import { ForumFooter } from "./footer/forum-footer";
+import { Frame } from "../../../../../shared/UI/frame/frame";
+import { MutatingDots } from "react-loader-spinner";
 
 interface ForumProps {
   setSelectedChat: (arg: string) => void;
@@ -22,7 +24,19 @@ const Forum = ({ setSelectedChat, selectedChat, activeBook, type, bookId }: Foru
   const uniqueDates = getUniqueDates(chatMessages);
   const { user } = useAuth();
 
-  if (isLoading) return <h1 className={cl.forumLoading}>Загружаем чат...</h1>;
+  if (isLoading) return <Frame h={"70vh"}>
+    <MutatingDots
+      height="100"
+      width="100"
+      color="#ED553B"
+      secondaryColor="#ED553B"
+      radius="12.5"
+      ariaLabel="mutating-dots-loading"
+      wrapperStyle={{}}
+      wrapperClass=""
+      visible={true}
+    />;
+  </Frame>;
 
   return (
     <div className={cl.forum}>

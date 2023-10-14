@@ -1,4 +1,4 @@
-.booksContainer{
+.booksContainer {
   width: 100%;
   display: grid;
   justify-content: flex-start;
@@ -6,7 +6,8 @@
   grid-template-columns: repeat(auto-fit, minmax(500px, 300px));
   overflow: hidden;
 }
-.booksImage{
+
+.booksImage {
   overflow: hidden;
   width: 500px;
   height: 600px;
@@ -14,8 +15,31 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   border-radius: 20px;
-  &:hover{
+
+  &:hover {
     opacity: 0.7;
     border-radius: 20px 20px 200px 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .booksContainer {
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
+  }
+  .booksImage {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .booksContainer {
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+  }
+  .booksImage {
+    width: 300px;
+    height: 300px;
   }
 }

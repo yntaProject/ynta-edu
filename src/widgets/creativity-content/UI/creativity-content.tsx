@@ -21,12 +21,12 @@ const CreativityContent = () => {
 
   return (
     <div className={cl.creativity}>
-      {messagesLoading ? (
+      {messagesLoading ? 
         <h1 className={cl.creativityLoading}>Загружаем сообщения...</h1>
-      ) : (
+        : 
         <div className={cl.creativityContent}>
           <div className={cl.creativityMessages}>
-            {uniqueDates.map((date, index) => (
+            {uniqueDates.map((date, index) => 
               <React.Fragment key={index}>
                 <p className={cl.creativityMessagesDate}>{date.toLocaleDateString()}</p>
                 {creativityMessages.map((msg: ICreativityMessage) => {
@@ -54,10 +54,10 @@ const CreativityContent = () => {
                   return null;
                 })}
               </React.Fragment>
-            ))}
+            )}
           </div>
         </div>
-      )}
+      }
       <footer className={cl.creativityFooter}>
         <form onSubmit={(e) => sendCreativityMessage(e, msg, user, setMsg)} className={cl.creativityForm}>
           <Input

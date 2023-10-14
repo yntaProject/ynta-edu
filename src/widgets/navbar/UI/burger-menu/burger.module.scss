@@ -1,0 +1,90 @@
+.burger {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  background: var(--primary-color);
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 100px;
+}
+
+.burgerBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.navbarProfile {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  color: #FFFFFF;
+}
+
+.navbarCircle {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+}
+
+.navbarNotdetected {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  color: #FFFFFF;
+
+  img {
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+  }
+}
+
+.navbarSections {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.sectionItem {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 2.16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.navbarLogout {
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.navbarReg {
+  text-align: center;
+  font-size: 36px;
+}

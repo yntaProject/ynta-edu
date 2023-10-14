@@ -2,6 +2,7 @@ import cl from "../../../selected-books.module.scss";
 import React, { useEffect, useRef } from "react";
 import { IMessage } from "../../../../../../shared/types";
 import { handleDelete } from "../../../../../../features/forum/chat/handle-delete";
+import { ThreeDots } from "react-loader-spinner";
 
 interface ForumBodyProps {
   uniqueDates: Date[];
@@ -23,7 +24,15 @@ const ForumBody = ({ uniqueDates, chatMessages, isLoading, userEmail, selectedCh
   return chatMessages.length &&
     <div className={cl.forumBody}>
       {isLoading
-        ? <h1 className={cl.forumBodyLoading}>Загружаем сообщения...</h1>
+        ? <ThreeDots
+          height="80"
+          width="80"
+          radius="9"
+          color="#4fa94d"
+          ariaLabel="three-dots-loading"
+          wrapperStyle={{}}
+          visible={true}
+        />
         :
         <div className={cl.forumMessages}>
           {uniqueDates.map((date, index) =>

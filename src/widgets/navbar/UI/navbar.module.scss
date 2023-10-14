@@ -68,3 +68,14 @@ h1 {
   align-items: center;
   gap: 16px;
 }
+
+
+@media screen and (max-width: 1300px) {
+  .navbar {
+    padding: 12px 40px;
+    gap: 50px;
+  }
+  .navbarSections {
+    gap: 14px;
+  }
+}

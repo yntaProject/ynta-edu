@@ -214,6 +214,7 @@
   }
 
   img {
+    background: none;
     width: 632px;
     height: 488px;
   }
@@ -233,7 +234,7 @@
   &Right {
     width: 100%;
     padding: 140px 100px;
-    background: #FAEFEF;
+
 
     &Text {
       display: flex;
@@ -273,3 +274,265 @@
     }
   }
 }
+
+@media screen and (max-width: 1600px) {
+  .statistic {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+
+    &Left {
+      h1 {
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+      }
+
+      &Cols {
+        &Button {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  .feedback {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: #FAEFEF;
+    padding: 20px;
+    border-radius: 20px;
+
+    img {
+      border-radius: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .homeIntro {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+
+    .homeIntroText {
+      .homeIntroTextLink {
+        width: 100%;
+        border-color: var(--secondary-color);
+        color: var(--secondary-color);
+      }
+    }
+  }
+  .preBenefits {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    p {
+      text-align: center;
+      max-width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .benefits {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 60px;
+
+    &Item {
+      flex-direction: column;
+      max-width: 100%;
+
+      &Text {
+        margin-top: 20px;
+      }
+    }
+  }
+  .joinUs {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+
+    &Text {
+      max-width: 100%;
+      text-align: center;
+
+      &Link {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .homeIntro {
+    img {
+      width: 413px;
+      height: 357px;
+    }
+  }
+  .statistic {
+    &Left {
+      &Cols {
+        flex-wrap: wrap;
+
+        &Item {
+          min-width: 40%;
+        }
+      }
+    }
+
+    img {
+      width: 432px;
+      height: 288px;
+    }
+  }
+  .feedback {
+    img {
+      width: 486px;
+      height: 366.044px;
+    }
+
+    &Right {
+      padding: 20px 40px;
+
+      &Button {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        input {
+          width: 100%;
+          background: #FFFFFF;
+        }
+
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .joinUs {
+    img {
+      width: 384px;
+      height: 252px;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .homeIntro {
+    .homeIntroText {
+      h1 {
+        font-size: 40px;
+        font-weight: 800;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+  .statistic {
+    padding: 20px 30px;
+
+    img {
+      width: 332px;
+      height: 188px;
+    }
+
+    &Left {
+      h1 {
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 36px;
+      }
+
+      p {
+        line-height: 26px;
+        letter-spacing: 0.6px;
+      }
+
+      &Cols {
+        justify-content: center;
+      }
+    }
+  }
+  .feedback {
+    img {
+      width: 386px;
+      height: 266.044px;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .homeIntro {
+    img {
+      width: 313px;
+      height: 257px;
+    }
+  }
+  .statistic {
+    margin-top: 80px;
+  }
+  .joinUs {
+    img {
+      width: 284px;
+      height: 152px;
+    }
+  }
+  .feedback {
+    margin-top: 80px;
+
+    &Right {
+      padding: 10px 20px;
+
+      &Text {
+        text-align: center;
+      }
+
+      &Button {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        input {
+          min-width: 80px;
+        }
+      }
+    }
+
+    img {
+      width: 236px;
+      height: 156.044px;
+      object-fit: cover;
+    }
+  }
+  .benefits {
+    &Item {
+      img {
+        width: 316px;
+        height: 147px;
+      }
+    }
+  }
+}
+

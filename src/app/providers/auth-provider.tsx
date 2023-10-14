@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useContext, createContext } from "react";
 import { getAuth, onAuthStateChanged, User } from "firebase/auth";
+import { MutatingDots } from "react-loader-spinner";
+import { Frame } from "../../shared/UI/frame/frame";
 
 export const UserContext = createContext<User | null>(null);
 
@@ -29,7 +31,7 @@ export const UserProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (newUser) => {
       setCurrentUser(newUser);
-      setLoading(false); // Set loading to false here
+      setLoading(false);
     });
 
     return unsubscribe;
@@ -37,7 +39,17 @@ export const UserProvider = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <UserContext.Provider value={currentUser}>
-      {loading ? "Loading..." : children}
+      {loading ? <Frame h={"100vh"}>
+        <MutatingDots
+          height="100"
+          width="100"
+          color="#ED553B"
+          secondaryColor="#ED553B"
+          radius="12.5"
+          ariaLabel="mutating-dots-loading"
+          visible={true}
+        />
+      </Frame> : children}
     </UserContext.Provider>
   );
 };
