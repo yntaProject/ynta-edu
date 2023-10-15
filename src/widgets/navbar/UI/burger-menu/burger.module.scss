@@ -6,13 +6,15 @@
   bottom: 0;
   z-index: 100;
   background: var(--primary-color);
-  height: 100vh;
   padding: 80px 50px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 100px;
   overflow-x: scroll;
+  clip-path: circle(0% at 100% 0%);
+  transition: clip-path 0.3s ease-out;
 }
 
 .burgerBtn {

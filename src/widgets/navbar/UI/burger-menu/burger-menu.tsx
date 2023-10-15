@@ -6,6 +6,7 @@ import { ThreeDots } from "react-loader-spinner";
 import { Link } from "react-router-dom";
 import { handleLogout } from "../../../authorization-content/helpers/handle-logout";
 import { User } from "firebase/auth";
+import { useSpring, animated } from "@react-spring/web";
 
 interface BurgerMenuProps {
   isOpen: boolean;
@@ -16,8 +17,12 @@ interface BurgerMenuProps {
 }
 
 const BurgerMenu = ({ isOpen, setIsOpen, loading, user, avatar }: BurgerMenuProps) => {
+  const springProps = useSpring({
+    clipPath: isOpen ? "circle(150% at 100% 0%)" : "circle(0% at 100% 0%)",
+  });
+
   return isOpen ?
-    <header className={cl.burger}>
+    <animated.header style={springProps} className={`${cl.burger} ${isOpen ? "open" : ""}`}>
       <div className={cl.burgerBtn}>
         <Hamburger toggled={isOpen} toggle={setIsOpen} size={48} easing="ease-in-out" rounded color={"#FFFFFF"}/>
       </div>
@@ -70,7 +75,7 @@ const BurgerMenu = ({ isOpen, setIsOpen, loading, user, avatar }: BurgerMenuProp
         <div className={cl.navbarReg} onClick={() => setIsOpen(false)}>
           <Link to={"/auth"} className={cl.sectionItem}>Зарегистрироваться</Link>
         </div>}
-    </header>
+    </animated.header>
     :
     <header>
       <div className={cl.burgerBtn}>
