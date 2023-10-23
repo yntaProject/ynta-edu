@@ -1,0 +1,1 @@
+export { ContestContent } from "./UI/contest-content";

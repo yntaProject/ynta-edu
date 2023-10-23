@@ -57,6 +57,7 @@ const BurgerMenu = ({ isOpen, setIsOpen, loading, user, avatar }: BurgerMenuProp
         <Link to={"/about"} className={cl.sectionItem} onClick={() => setIsOpen(false)}>О Нас</Link>
         <Link to={"/books"} className={cl.sectionItem} onClick={() => setIsOpen(false)}>Книги</Link>
         <Link to={"/creativity"} className={cl.sectionItem} onClick={() => setIsOpen(false)}>Творчество</Link>
+        <Link to={"/contest"} className={cl.sectionItem} onClick={() => setIsOpen(false)}>Конкурсы</Link>
       </div>
       {loading &&
         <Frame>

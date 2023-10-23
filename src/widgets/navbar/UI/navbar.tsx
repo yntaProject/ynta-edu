@@ -55,6 +55,8 @@ const Navbar = () => {
         <Link to={"/books"} className={cl.sectionItem}>Книги</Link>
         <span className={cl.column}></span>
         <Link to={"/creativity"} className={cl.sectionItem}>Творчество</Link>
+        <span className={cl.column}></span>
+        <Link to={"/contest"} className={cl.sectionItem}>Конкурсы</Link>
       </div>
       {loading &&
         <Frame>
@@ -64,7 +66,6 @@ const Navbar = () => {
             radius="9"
             color="#ED553B"
             ariaLabel="three-dots-loading"
-            wrapperStyle={{}}
             visible={true}
           />
         </Frame> ||

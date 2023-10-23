@@ -18,6 +18,10 @@
       "destination": "/index.html"
     },
     {
+      "source": "/contest",
+      "destination": "/index.html"
+    },
+    {
       "source": "/books/russian",
       "destination": "/index.html"
     },
