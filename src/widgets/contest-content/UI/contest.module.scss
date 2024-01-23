@@ -1,17 +1,25 @@
-.contest{
-    width: 100%;
-    display: grid;
-    justify-content: flex-start;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(700px, 800px));
-    overflow: hidden;
+.contest {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.contestItem{
+
+.contestInner {
+  width: 100%;
+  display: grid;
+  justify-content: flex-start;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(700px, 800px));
+  overflow: hidden;
+}
+
+.contestItem {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 20px;
 }
+
 .contestItemImage {
   overflow: hidden;
   width: 700px;
@@ -20,16 +28,20 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   border-radius: 20px;
+
   &:hover {
     opacity: 0.7;
   }
 }
-.contestText{
+
+.contestText {
   padding: 0 20px;
-  h1{
+
+  h1 {
     font-size: 48px;
   }
-  p{
+
+  p {
     color: rgba(57, 50, 128, 0.80);
     font-size: 22px;
     font-weight: 500;
@@ -39,42 +51,84 @@
   }
 }
 
+.contestList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    strong {
+      font-size: 26px;
+      text-decoration: underline;
+      white-space: nowrap;
+
+      &:hover {
+        transition: all 0.3s ease;
+        color: rgba(57, 50, 128, 0.80);
+      }
+    }
+
+    p {
+      color: rgba(57, 50, 128, 0.80);
+      font-size: 20px;
+    }
+  }
+}
+
 @media screen and (max-width: 1700px) {
-  .contest{
+  .contest {
     justify-content: flex-start;
     grid-template-columns: 1fr;
   }
-  .contestItem{
+  .contestItem {
     flex-direction: row;
   }
-  .contestItemImage{
+  .contestItemImage {
     min-width: 300px;
     max-width: 300px;
     height: 400px;
   }
 }
+
 @media screen and (max-width: 750px) {
-  .contestText{
-    h1{
+  .contestText {
+    h1 {
       font-size: 36px;
     }
-    p{
+
+    p {
       font-size: 18px;
       letter-spacing: 0.3px;
 
     }
   }
+  .contestList {
+    li {
+      strong {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
 }
+
 @media screen and (max-width: 630px) {
-  .contest{
+  .contest {
     justify-content: center;
   }
-  .contestItem{
+  .contestItem {
     width: 100%;
     flex-direction: column;
     align-items: center;
   }
-  .contestText{
+  .contestText {
     text-align: center;
   }
 }
